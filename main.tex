@@ -390,13 +390,19 @@
         \[y = 3\pm2e^{-\sin x}\]
         \[y = 3-2e^{-\sin x}\]
     \item We can show the general solution to a differential equation via a slope field, see Figure \ref{fig:slopeFields}
-
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.5\linewidth]{images/Slope Fields.jpg}
         \caption{Slope Fields}
         \label{fig:slopeFields}
     \end{figure}
+    \item Another U-Sub Example:
+        \[\int\frac{e^{2x}-e^{-2x}}{e^{2x}+e^{-2x}}\,dx\]
+        \[\letv{u}e^{2x}+e^{-2x}\]
+        \[du = 2e^{2x}-2e^{-2x}\,dx\]
+        \[\frac{1}{2}\int\frac{1}{u}\,du\]
+        \[\frac{1}{2}\ln|u|+c\]
+        \[\boxed{\frac{1}{2}\ln\left(e^{2x}+e^{-2x}\right)+c}\]
 \end{itemize}
 
 \end{document}
