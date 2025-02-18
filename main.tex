@@ -396,6 +396,9 @@
         \caption{Slope Fields}
         \label{fig:slopeFields}
     \end{figure}
+    \item Horizontal lines are drawn when $\diff{y}{x} = 0$
+    \item Vertical lines are drawn when $\diff{y}{x} = \frac{a}{0}$, $a\neq0$
+    \item $\frac{0}{0}$ is an indeterminate form and should not be drawn
     \item Another U-Sub Example:
         \[\int\frac{e^{2x}-e^{-2x}}{e^{2x}+e^{-2x}}\,dx\]
         \[\letv{u}e^{2x}+e^{-2x}\]
@@ -403,6 +406,19 @@
         \[\frac{1}{2}\int\frac{1}{u}\,du\]
         \[\frac{1}{2}\ln|u|+c\]
         \[\boxed{\frac{1}{2}\ln\left(e^{2x}+e^{-2x}\right)+c}\]
+\end{itemize}
+
+\newpage
+\section{Area and Volume}
+\begin{itemize}
+    \item A definite integral gives the net area and considers area under the x-axis to be negative
+    \item If they ask for the 'Area' they mean total area rather than net area
+    \item However, to get total area, we must consider all areas to be positive
+        \[A=\int_a^b|f(x)|\,dx\]
+    \item If we can use a calculator then this works we can just plug this in as written
+    \item However, if we can't then we must use the definition of the absolute value function
+    \item To do this find where $f(x)$ is positive and negative, then negate the negative half
+    \item This can be thought of finding the area between two curves: $f(x)$ and $x=0$
 \end{itemize}
 
 \end{document}
