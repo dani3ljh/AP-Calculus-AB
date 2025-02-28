@@ -95,7 +95,7 @@
     \item Derivative Rules
     \begin{itemize}
         \item Derivative of a Constant function: if $c$ is a constant, then $\diff{}{x} c = 0$
-        \item Power Rule: $\diff{}{x} ax^b = abx^{(b-1)}$
+        \item Power Rule: $\diff{}{x} ax^b = abx^{b-1}$
         \item Product Rule: $\diff{}{x} uv = uv' + vu'$
         \item Quotient Rule: $\diff{}{x} \frac{u}{v} = \frac{vu' - uv'}{v^2}$
         \item Log Rule: $\diff{}{x} \log_bx = \frac{1}{x\ln b}$
@@ -419,6 +419,92 @@
     \item However, if we can't then we must use the definition of the absolute value function
     \item To do this find where $f(x)$ is positive and negative, then negate the negative half
     \item This can be thought of finding the area between two curves: $f(x)$ and $x=0$
+    \item For Example find the total area of the region between the curve and the x-axis
+        \[y = 3x^2-3\quad-2\leq x\leq2\]
+        \[3x^2-3 = 0\]
+        \[3\left(x^2-1\right) = 0\]
+        \[x^2 = 1\]
+        \[x = \pm1\]
+        \[x\in(-2,-1)(1,2)\implies y>0\quad x\in(-1,1)\implies y<0\]
+        \[\int_{-2}^{-1}\left(3x^2-3\right)\,dx+\int_{-1}^1\left(3-3x^2\right)\,dx+\int_1^2\left(3x^2-3\right)\,dx\]
+        \[\left(x^3-3x\intbar_{-2}^{-1}\right)+\left(3x-x^3\intbar_{-1}^1\right)+\left(x^3-3x\intbar_1^2\right)\]
+        \[\left[(-1+3)-(-8+6)\right]+\left[(3-1)-(-3+1)\right]+\left[(8-6)-(1-3)\right]\]
+        \[(2+2)+(2+2)+(2+2)\]
+        \[\boxed{12}\]
+    \item Volumes using Cross Sections is not to be confused with regular area
+    \item The general formula for volume is as follows:
+        \[V = \int A\,dx\]
+    \newpage
+    \item For Example Let R be the region bounded by $x=y^2$ and $x=9$. Find the volume of the solid that had R as its base if every cross section by the plane perpendicular to the x-axis has a square with a base in the xy plane
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{images/Cross Section.png}
+        \caption{Cross Section}
+        \label{fig:crossSection}
+    \end{figure}
+        \[y = \pm\sqrt{x}\]
+        \[A = \left(2\sqrt{x}\right)^2 = 4x\]
+        \[V = \int_0^9 4x\,dx\]
+        \[V = 2x^2\intbar_0^9\]
+        \[V = 2(81) = \boxed{162}\]
+    \item Another example instead of a square, an equilateral triangle
+        \[A = \frac{1}{2}\left(2\sqrt{x}\right)\left(\sqrt{3x}\right) = x\sqrt3\]
+        \[V = \int_0^9 x\sqrt3\,dx\]
+        \[V = \frac{x^2\sqrt3}{2}\intbar_0^9\]
+        \[V = \boxed{\frac{81\sqrt3}{2}}\]
+    \item Another example instead of a square, a rectangle with a height of 2
+        \[A = 4\sqrt{x}\]
+        \[V = \int_0^9 4\sqrt{x}\,dx\]
+        \[V = \frac{2}{\sqrt{x}}\intbar_0^9\]
+        \[V = \frac{2}{\sqrt{9}} = \boxed{\frac{2}{3}}\]
+    \item Volume by rotating around an axis is calculuated differently
+    \item The formula for volume of a solid formed by rotation is:
+        \[A = \pi r^2\]
+        \[V = \pi\int r^2\,dx\]
+    \item If we need to find the area between two curves the volume of the solid formed is as follows:
+        \[A = \pi \left(R^2 - r^2\right)\]
+        \[V = \pi\int \left(R^2 - r^2\right)\,dx\]
+    \item For example: The first quadrant region bounded by $f(x) = -x^2+9$, $g(x) = 2x+1$, and the y-axis. Rotate this area around the x-axis. (Calculuator Ok)
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\linewidth]{images/Washer Cross Section.png}
+        \caption{Washer Cross Section}
+        \label{fig:washerCrossSection}
+    \end{figure}
+        \[R = -x^2+9\]
+        \[r = 2x+1\]
+        \[A = \pi\left(R^2-r^2\right)\]
+        \[A = \pi\left[\left(-x^2+9\right)^2-\left(2x+1\right)^2\right]\]
+        \[V = \pi\int_0^2\left[\left(-x^2+9\right)^2-\left(2x+1\right)^2\right]\,dx\]
+        \[V = 313.321\]
+    \newpage
+    \item When rotating an area around a line other than the x and y-axes simply subtract it to the curve
+    \item For example: Find the volume if the region enclosed by $y=x^3$, $x=0$, and $y=8$ is rotated about the line $y=8$
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\linewidth]{images/Cubic Cross Section.png}
+        \caption{Cubic Cross Section}
+        \label{fig:cubicCrossSection}
+    \end{figure}
+        \[y = 8\implies x = 2\]
+        \[R = 8-x^3\]
+        \[A = \pi\left(8-x^3\right)^2\]
+        \[V = \pi\int_0^2\left(8-x^3\right)^2\,dx\]
+        \[V = 258.508\]
+    \item Another example:  Find the volume of the region enclosed by $y=x^2$ and $y=2x$ ($x\geq0$) is rotated about the line $x=2$
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\linewidth]{images/Quadratic Cross Section.png}
+        \caption{Quadratic Cross Section}
+        \label{fig:quadraticCrossSection}
+    \end{figure}
+        \[x = \frac{y}{2}\]
+        \[x = \sqrt{y}\]
+        \[R = 2-\frac{y}{2}\]
+        \[r = 2-\sqrt{y}\]
+        \[x = 2\implies y = 4\]
+        \[V = \pi\int_0^4\left[\left(2-\frac{y}{2}\right)^2-\left(2-\sqrt{y}\right)^2\right]\,dy\]
+        \[V = 8.378\]
 \end{itemize}
 
 \end{document}
